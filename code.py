@@ -52,3 +52,22 @@ msg = 'an example sentence with only lowercase letters that can be used to test 
 encoding = encoding_map(msg)
 msg_huffman = huffman_encode(msg, encoding)
 msg_huffman
+
+
+
+
+def decoding_map(encoding):
+  """ just invert encoding dictionary """
+  return {v:k for k,v in encoding.items()}
+
+def huffman_decode(bits, decoding):
+  """ apply decoding to binary message 'bits' """
+  key, res = '', []
+  for bit in bits:
+    key += bit
+    if key in decoding:
+      res.append(decoding[key])
+      key = ''
+  return ''.join(res)
+
+huffman_decode(msg_huffman, decoding_map(encoding))
