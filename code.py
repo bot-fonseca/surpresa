@@ -48,10 +48,12 @@ def huffman_encode(msg, encoding):
   return ''.join(map(lambda c: encoding[c], msg))
 
 
-msg = 'an example sentence with only lowercase letters that can be used to test the algorithm we are explaining'
+msg = 'amor bom sei que ha ja algum tempo nao tinhas algo do genero e por isso espero que seja um desafio interessante. as regras sao simples so ha letras minusculas espaços e ponto final. primeiro obrigado por todo o tempo que passas comigo todo o tempo que investes tanto em ti como em mim como na relaçao que temos. obrigado por seres a melhor pessoa e a melhor namorada que alguma vez podia ter sonhado. sou muito sortudo e muito feliz e apenas quero que sejas tao feliz e que te sintas tao sortuda como eu. assim como este desafio que estas agora a resolver ha vezes em que podes pensar que eu proprio sou um desafio e que nem sempre e facil aqui ha numeros para letras ou seja diferentes formas de expressar o mesmo mas apenas comunicando e que vamos chegar ao mesmo entendimento do outro. obrigado por nao desistires de mim e teres tanta paciencia nao so para mim mas para todas as minhas parvoices. amo te muito mais que ontem menos que amanha.'
 encoding = encoding_map(msg)
+print(encoding)
+print("-----------------------------")
 msg_huffman = huffman_encode(msg, encoding)
-msg_huffman
+print(msg_huffman)
 
 
 
